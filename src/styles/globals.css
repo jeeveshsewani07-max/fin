@@ -1,0 +1,357 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 18px;
+  --dynamic-font-size: 18px;
+  --dynamic-contrast: 100%;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+  --card: #FFFFFF;
+  --card-foreground: #1E293B;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E293B;
+  --primary: #4F46E5;
+  --primary-foreground: #ffffff;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #475569;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #E0E7FF;
+  --accent-foreground: #4F46E5;
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: #E2E8F0;
+  --input: #FFFFFF;
+  --input-background: #FFFFFF;
+  --switch-background: #E2E8F0;
+  --font-weight-medium: 600;
+  --font-weight-normal: 500;
+  --ring: #4F46E5;
+  --chart-1: #4F46E5;
+  --chart-2: #16A34A;
+  --chart-3: #D97706;
+  --chart-4: #7C3AED;
+  --chart-5: #DC2626;
+  --radius: 0.75rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1E293B;
+  --sidebar-primary: #4F46E5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F8FAFC;
+  --sidebar-accent-foreground: #475569;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #4F46E5;
+  
+  /* Senior-specific module colors - softer, more harmonious palette */
+  --health-color: #4F46E5;
+  --findDoctor-color: #DC2626;
+  --reminders-color: #F59E0B;
+  --events-color: #0891B2;
+  --community-color: #059669;
+  --healthcareHelpers-color: #EA580C;
+  --chat-color: #16A34A;
+  --rides-color: #D97706;
+  --bills-color: #7C3AED;
+  --sos-color: #DC2626;
+  --settings-color: #6B7280;
+}
+
+.light {
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+  --card: #FFFFFF;
+  --card-foreground: #1E293B;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E293B;
+  --primary: #4F46E5;
+  --primary-foreground: #ffffff;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #475569;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #E0E7FF;
+  --accent-foreground: #4F46E5;
+  --destructive: #DC2626;
+  --destructive-foreground: #ffffff;
+  --border: #E2E8F0;
+  --input: #FFFFFF;
+  --input-background: #FFFFFF;
+  --switch-background: #E2E8F0;
+  --ring: #4F46E5;
+  --chart-1: #4F46E5;
+  --chart-2: #16A34A;
+  --chart-3: #D97706;
+  --chart-4: #7C3AED;
+  --chart-5: #DC2626;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1E293B;
+  --sidebar-primary: #4F46E5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F8FAFC;
+  --sidebar-accent-foreground: #475569;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #4F46E5;
+}
+
+.dark {
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: #1E293B;
+  --card-foreground: #F8FAFC;
+  --popover: #1E293B;
+  --popover-foreground: #F8FAFC;
+  --primary: #6366F1;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #E2E8F0;
+  --muted: #334155;
+  --muted-foreground: #94A3B8;
+  --accent: #312E81;
+  --accent-foreground: #C7D2FE;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #475569;
+  --input: #334155;
+  --input-background: #334155;
+  --switch-background: #475569;
+  --ring: #6366F1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #6366F1;
+  --chart-2: #22C55E;
+  --chart-3: #F59E0B;
+  --chart-4: #8B5CF6;
+  --chart-5: #EF4444;
+  --sidebar: #1E293B;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #6366F1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: #475569;
+  --sidebar-ring: #6366F1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Dynamic scaling for accessibility */
+.dynamic-scaling {
+  font-size: var(--dynamic-font-size);
+}
+
+/* Ensure the scaling applies to all text elements by inheriting from root */
+.dynamic-scaling,
+.dynamic-scaling * {
+  font-size: inherit;
+}
+
+/* Override specific elements to maintain proper hierarchy while scaling */
+.dynamic-scaling h1 {
+  font-size: 1.5em; /* Relative to the dynamic base font size */
+}
+
+.dynamic-scaling h2 {
+  font-size: 1.25em;
+}
+
+.dynamic-scaling h3 {
+  font-size: 1.125em;
+}
+
+.dynamic-scaling h4,
+.dynamic-scaling p,
+.dynamic-scaling span,
+.dynamic-scaling div,
+.dynamic-scaling button,
+.dynamic-scaling input,
+.dynamic-scaling label,
+.dynamic-scaling li,
+.dynamic-scaling td,
+.dynamic-scaling th {
+  font-size: 1em;
+}
+
+/* Scale Tailwind text utility classes proportionally */
+.dynamic-scaling .text-sm {
+  font-size: 0.875em !important;
+}
+
+.dynamic-scaling .text-base {
+  font-size: 1em !important;
+}
+
+.dynamic-scaling .text-lg {
+  font-size: 1.125em !important;
+}
+
+.dynamic-scaling .text-xl {
+  font-size: 1.25em !important;
+}
+
+.dynamic-scaling .text-2xl {
+  font-size: 1.5em !important;
+}
+
+/* Ensure text in cards and components scale properly */
+.dynamic-scaling .card,
+.dynamic-scaling .ui-card {
+  font-size: inherit;
+}
+
+/* Module-specific color consistency */
+.module-health {
+  color: var(--health-color);
+}
+
+.module-findDoctor {
+  color: var(--findDoctor-color);
+}
+
+.module-reminders {
+  color: var(--reminders-color);
+}
+
+.module-events {
+  color: var(--events-color);
+}
+
+.module-community {
+  color: var(--community-color);
+}
+
+.module-healthcareHelpers {
+  color: var(--healthcareHelpers-color);
+}
+
+.module-chat {
+  color: var(--chat-color);
+}
+
+.module-rides {
+  color: var(--rides-color);
+}
+
+.module-bills {
+  color: var(--bills-color);
+}
+
+.module-sos {
+  color: var(--sos-color);
+}
+
+.module-settings {
+  color: var(--settings-color);
+}
